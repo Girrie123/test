@@ -47,7 +47,7 @@ function uidExists($conn, $username, $email) {
   $sql = "SELECT * FROM users WHERE userUid = ? OR usersEmail = ?;";
   $stmt = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ./signup.php?error=stmtfailed");
+    header("location: ../signup.php?error=stmtfailed");
     exit();
   }
 
